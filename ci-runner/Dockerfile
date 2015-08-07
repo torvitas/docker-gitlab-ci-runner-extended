@@ -5,4 +5,4 @@ RUN apt-get update && apt-get install -y curl && rm -r /var/lib/apt/lists/*
 RUN wget -qO- https://get.docker.com/ | sh && rm -r /var/lib/apt/lists/*
 RUN curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
-RUN groupadd -g 997 dockerhost && gpasswd -a gitlab_ci_runner dockerhost
+RUN groupadd -g 1001 dockerhost && gpasswd -a gitlab_ci_runner dockerhost
