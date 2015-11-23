@@ -3,6 +3,6 @@ MAINTAINER "Sascha Marcel Schmidt" <docker@saschaschmidt.net>
 
 RUN apt-get update && apt-get install -y curl && rm -r /var/lib/apt/lists/*
 RUN curl -L https://get.docker.com/ | sh && rm -r /var/lib/apt/lists/*
-RUN curl -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.5.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
 RUN groupadd -g 1001 dockerhost && gpasswd -a gitlab_ci_runner dockerhost
