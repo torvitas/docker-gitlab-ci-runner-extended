@@ -1,4 +1,4 @@
-FROM sameersbn/gitlab-ci-runner:5.2.1
+FROM debian:8
 MAINTAINER "Sascha Marcel Schmidt" <docker@saschaschmidt.net>
 
 RUN apt-get update && apt-get install -y curl && rm -r /var/lib/apt/lists/*
